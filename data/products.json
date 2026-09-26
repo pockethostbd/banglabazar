@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "name": "📚 ইসলামি ইতিহাস (১ম–৫ম খণ্ড)",
+    "slug": "islamer-etihash",
+    "category": "Islamic",
+    "brand": "",
+    "sku": "",
+    "price": 3100,
+    "salePrice": 1395,
+    "stock": 10,
+    "status": "published",
+    "shortDescription": "ইসলামের ইতিহাস শুধু অতীতের গল্প নয়—এটি মুসলিম সভ্যতা, সংস্কৃতি, উত্থান-পতন এবং গুরুত্বপূর্ণ ঐতিহাসিক ঘটনাগুলো বোঝার একটি গুরুত্বপূর্ণ মাধ্যম।",
+    "images": [
+      "https://pockethostbd.github.io/drive-one/picture/islamer-etihash-1-5.jpg"
+    ],
+    "videos": [],
+    "tags": [
+      "book",
+      "islamic",
+      "etihash"
+    ],
+    "updatedAt": "2026-09-26T10:21:45.701Z"
+  }
+]
