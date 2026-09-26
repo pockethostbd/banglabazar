@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Admin - BanglaBazar</title><link rel="stylesheet" href="css/admin.css"></head>
+<body>
+<div id="adminLogin" class="admin-login">
+  <div class="admin-card">
+    <div class="admin-logo">B</div><h1>BanglaBazar Admin</h1><p>GitHub credentials এখানে দিন। এগুলো source code-এ রাখা নেই।</p>
+    <label>GitHub Username<input id="ghUser" autocomplete="username"></label>
+    <label>Repository Name<input id="ghRepo"></label>
+    <label>GitHub API / Personal Access Token<input id="ghToken" type="password" autocomplete="off"></label>
+    <label>Admin Password<input id="adminPassword" type="password"></label>
+    <button id="adminEnter" class="admin-btn">Admin Panel খুলুন</button>
+    <p id="loginMsg" class="admin-error"></p>
+  </div>
+</div>
+
+<div id="dashboard" class="hidden">
+<header class="admin-top"><strong>BanglaBazar Admin</strong><button id="logoutBtn" class="ghost">Logout</button></header>
+<div class="admin-layout">
+<aside class="sidebar">
+<button data-tab="dashboardTab" class="nav active">Dashboard</button>
+<button data-tab="productsTab" class="nav">Products</button>
+<button data-tab="addTab" class="nav">+ Add Product</button>
+<button data-tab="settingsTab" class="nav">Website Settings</button>
+</aside>
+<main class="admin-main">
+<section id="dashboardTab" class="tab"><h1>Dashboard</h1><div class="stats"><div><b id="statProducts">0</b><span>Products</span></div><div><b id="statCategories">0</b><span>Categories</span></div></div><div class="panel"><h2>Repository</h2><p id="repoInfo"></p></div></section>
+
+<section id="productsTab" class="tab hidden"><div class="section-title"><h1>Products</h1><button class="admin-btn" data-open="addTab">+ Add Product</button></div><div id="adminProducts"></div></section>
+
+<section id="addTab" class="tab hidden"><h1 id="formTitle">Add Product</h1>
+<form id="productForm" class="form-grid">
+<input type="hidden" id="editSha"><input type="hidden" id="oldSlug">
+<label>Product Name<input id="pName" required maxlength="160"></label>
+<label>URL Slug<input id="pSlug" required pattern="[a-z0-9-]+" placeholder="iphone-15"></label>
+<label>Category<input id="pCategory" maxlength="80"></label>
+<label>Brand<input id="pBrand" maxlength="80"></label>
+<label>SKU<input id="pSku" maxlength="80"></label>
+<label>Regular Price<input id="pPrice" type="number" min="0" step="0.01"></label>
+<label>Sale Price<input id="pSale" type="number" min="0" step="0.01"></label>
+<label>Stock<input id="pStock" type="number" min="0" step="1" value="0"></label>
+<label>Status<select id="pStatus"><option value="published">Published</option><option value="draft">Draft</option><option value="hidden">Hidden</option><option value="out_of_stock">Out of stock</option></select></label>
+<label class="full-field">Short Description<textarea id="pShort" rows="3"></textarea></label>
+<label class="full-field">Image URLs (one per line)<textarea id="pImages" rows="6" placeholder="https://example.com/image.jpg"></textarea></label>
+<label class="full-field">YouTube URLs (one per line)<textarea id="pVideos" rows="4" placeholder="https://www.youtube.com/watch?v=..."></textarea></label>
+<label class="full-field">Tags (comma separated)<input id="pTags" placeholder="phone, apple, iphone"></label>
+<label class="full-field">Markdown Description<textarea id="pMarkdown" rows="14" placeholder="## Product Overview&#10;&#10;লিখুন..."></textarea></label>
+<div class="form-actions"><button type="submit" class="admin-btn">Save Product</button><button type="button" id="resetForm" class="ghost">Clear</button></div>
+<p id="productMsg" class="admin-error full-field"></p>
+</form></section>
+
+<section id="settingsTab" class="tab hidden"><h1>Website Settings</h1>
+<form id="settingsForm" class="form-grid">
+<label>Website Name<input id="sName"></label>
+<label>Logo URL<input id="sLogo" placeholder="https://..."></label>
+<label>Favicon URL<input id="sFavicon"></label>
+<label>Primary Color<input id="sPrimary" type="color"></label>
+<label>Button Color<input id="sButton" type="color"></label>
+<label>Button Text Color<input id="sButtonText" type="color"></label>
+<label>Background Color<input id="sBg" type="color"></label>
+<label>Card Color<input id="sCard" type="color"></label>
+<label>Text Color<input id="sText" type="color"></label>
+<label>Muted Color<input id="sMuted" type="color"></label>
+<label>Currency<input id="sCurrency" maxlength="5"></label>
+<label class="check"><input id="sShowPrices" type="checkbox"> Show prices</label>
+<div class="form-actions"><button class="admin-btn" type="submit">Save Settings</button></div>
+<p id="settingsMsg" class="admin-error full-field"></p>
+</form></section>
+</main></div></div>
+<script type="module" src="js/admin.js"></script>
+</body></html>

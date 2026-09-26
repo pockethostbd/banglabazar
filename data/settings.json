@@ -1,0 +1,14 @@
+{
+  "siteName": "BanglaBazar",
+  "logoUrl": "",
+  "faviconUrl": "",
+  "primaryColor": "#1565C0",
+  "buttonColor": "#1565C0",
+  "buttonTextColor": "#FFFFFF",
+  "backgroundColor": "#F7F8FA",
+  "cardColor": "#FFFFFF",
+  "textColor": "#17202A",
+  "mutedColor": "#667085",
+  "currency": "৳",
+  "showPrices": true
+}
